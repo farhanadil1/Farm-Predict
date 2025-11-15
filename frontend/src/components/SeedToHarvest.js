@@ -43,7 +43,7 @@ const SeedToHarvest = () => {
         </div>
         <Link to={`/solutions`}>
             <button className='bg-orange-200 mt-12 px-6 py-3 rounded-lg text-black h-fit items-center
-            font-medium shadow-xl hover:scale-105 transition-all duration-300'>
+            font-medium text-sm shadow-xl hover:scale-105 transition-all duration-300'>
               View More
             </button>
         </Link>

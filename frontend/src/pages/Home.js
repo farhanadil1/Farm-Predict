@@ -17,8 +17,8 @@ const Home = () => {
       <ModernSolutions />
       <Partners />
       <WhatWeDo />
-      <CTABanner />
       <SeedToHarvest />
+      <CTABanner />
       <News />
       <Footer />
     </div>

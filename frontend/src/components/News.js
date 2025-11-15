@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { CiCircleMore } from "react-icons/ci";
 
 
@@ -16,12 +17,20 @@ const News = () => {
   ];
 
   return (
-    <div className="bg-white py-10 px-8">
+    <div className="bg-white py-16 px-8">
       <div className="max-w-6xl mx-auto px-20">
         <p className='text-xs font-normal text-gray-500 border w-fit py-1 px-2 rounded-lg border-gray-500 mb-2'>
               LATEST NEWS
         </p>
-        <h2 className="text-3xl md:text-5xl font-semibold text-gray-800 mb-12 text-left">Explore Our Latest <br/>News & Tips</h2>
+        <div className='flex justify-between items-center'>
+          <h2 className="text-3xl md:text-5xl font-semibold text-gray-800 mb-12 text-left">Explore Our Latest <br/>News & Tips</h2>
+          <Link to={`/solutions`}>
+            <button className='bg-orange-200 px-6 py-3 rounded-lg text-black h-fit items-center
+            font-medium text-sm shadow-xl hover:scale-105 transition-all duration-300'>
+              Read More
+            </button>
+          </Link>
+        </div>
         <div className="grid md:grid-cols-3 gap-8">
           {posts.map((post) => (
             <div key={post.title} className="overflow-hidden">

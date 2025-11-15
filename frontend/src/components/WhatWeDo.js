@@ -30,7 +30,7 @@ const WhatWeDo = () => {
   ];
 
   return (
-    <section className="py-20 px-10 bg-[#8B9271] text-white">
+    <section className="py-20 px-10 bg-green-900 text-white">
       <div className="max-w-6xl mx-auto">
         <div className='flex justify-between md:px-16 items-center'>
           <div>
@@ -47,7 +47,7 @@ const WhatWeDo = () => {
             </div>
             <Link to={`/solutions`}>
             <button className='bg-orange-200 px-6 py-3 rounded-lg text-black h-fit items-center
-            font-medium shadow-xl hover:scale-105 transition-all duration-300'>
+            font-medium text-sm shadow-xl hover:scale-105 transition-all duration-300'>
               Learn More
             </button>
             </Link>
