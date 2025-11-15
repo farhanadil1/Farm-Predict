@@ -18,7 +18,7 @@ const Hero = () => {
       />
 
       {/* Foreground Content */}
-      <div className="relative z-10 h-full">
+      <div className="relative z-10 h-full max-w-7xl mx-auto">
 
         {/* ROW 1: Left + Right */}
         <div className="flex justify-between px-10 pt-32">

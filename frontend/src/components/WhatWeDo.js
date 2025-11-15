@@ -2,10 +2,10 @@ import React from 'react'
 
 const WhatWeDo = () => {
   const services = [
-    { title: "Precision Farming", img: "https://placehold.co/400x300/F2E8C6/466336?text=Crops" },
-    { title: "Smart Tractors", img: "https://placehold.co/400x300/466336/FFFFFF?text=Tractor" },
-    { title: "Drone Analytics", img: "https://placehold.co/400x300/F2E8C6/466336?text=Drone+View" },
-    { title: "Data Management", img: "https://placehold.co/400x300/466336/FFFFFF?text=Analytics" },
+    { title: "Crop Prediction", img: "https://placehold.co/400x300/F2E8C6/466336?text=Crops" },
+    { title: "Fertilizer Prediction", img: "https://placehold.co/400x300/466336/FFFFFF?text=Tractor" },
+    { title: "Irrigation Analytics", img: "https://placehold.co/400x300/F2E8C6/466336?text=Drone+View" },
+    { title: "Market Analysis", img: "https://placehold.co/400x300/466336/FFFFFF?text=Analytics" },
   ];
 
   return (

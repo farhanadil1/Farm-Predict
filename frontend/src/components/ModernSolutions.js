@@ -14,8 +14,8 @@ const ModernSolutions = () => {
              and real-time market analysis, we empower farmers to make smarter, data-driven decisions at 
              every stage of cultivation. 
           </p>
-          <button className="mt-8 bg-green-800 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-700">
-            Learn More
+          <button className="mt-8 shadow-md bg-green-800 text-white px-4 py-3 rounded-md font-semibold hover:bg-green-700">
+            Our Solutions
           </button>
         </div>
         <div>
