@@ -26,11 +26,11 @@ const SeedToHarvest = () => {
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-7xl font-bold pr-32 text-green-900">From Planting</h2>
         <h2 className="text-3xl md:text-7xl font-bold pl-32 text-orange-200">to Harvest</h2>
-        <div className="grid md:grid-cols-3 gap-6 px-20 z-10 -mt-2">
+        <div className="grid md:grid-cols-3 gap-4 px-20 z-10 -mt-2">
           {steps.map((step) => (
             <div key={step.title} className="overflow-hidden cursor-pointer">
               <img src={step.img} alt={step.title} className="w-full rounded-md h-96 object-cover" />
-              <div className='flex'>
+              <div className='flex mt-2'>
                 <p className='px-2 py-1 text-xs mt-4 text-gray-500 border border-gray-500 rounded-lg'>{step.tag1}</p>
                 <p className='px-2 py-1 text-xs mt-4 text-gray-500 border border-gray-500 ml-2 rounded-lg'>{step.tag2}</p>
               </div>

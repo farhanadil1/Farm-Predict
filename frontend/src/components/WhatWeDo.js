@@ -30,7 +30,7 @@ const WhatWeDo = () => {
   ];
 
   return (
-    <section className="py-20 px-10 bg-gradient-to-tr text-white from-green-800 via-green-600 to-green-800">
+    <section className="py-20 px-10 bg-[#8B9271] text-white">
       <div className="max-w-6xl mx-auto">
         <div className='flex justify-between md:px-16 items-center'>
           <div>
@@ -53,7 +53,7 @@ const WhatWeDo = () => {
             </Link>
         </div>
         {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 px-8">
           {services.map((service, index) => (
             <div
               key={index}

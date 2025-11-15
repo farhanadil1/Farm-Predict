@@ -1,25 +1,36 @@
 import React from 'react'
+import { CiCircleMore } from "react-icons/ci";
+
 
 const News = () => {
   const posts = [
-    { title: "Latest Updates in Global Agriculture", img: "https://placehold.co/400x250/F2E8C6/466336?text=News+1" },
-    { title: "New Tractor Technology for 2026", img: "https://placehold.co/400x250/466336/FFFFFF?text=News+2" },
-    { title: "Organic vs. Conventional Farming", img: "https://placehold.co/400x250/D1D099/466336?text=News+3" },
+    { title: "Latest Updates in Global Agriculture",
+      date: "18 AUGUST,2025",
+      img: "https://images.unsplash.com/photo-1620200423727-8127f75d7f53?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { title: "New Tractor Technology for 2026",
+      date: "29 SEPTEMBER,2025", 
+      img: "https://images.unsplash.com/photo-1594771804886-a933bb2d609b?q=80&w=1182&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+    { title: "Organic vs. Conventional Farming", 
+      date: "18 NOVEMBER,2025",
+      img: "https://plus.unsplash.com/premium_photo-1678751640165-38e3ff1999c6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
   ];
 
   return (
-    <div className="bg-white py-16 md:py-24 px-8">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-green-900 mb-12 text-center">Explore Our Latest News & Tips</h2>
+    <div className="bg-white py-10 px-8">
+      <div className="max-w-6xl mx-auto px-20">
+        <p className='text-xs font-normal text-gray-500 border w-fit py-1 px-2 rounded-lg border-gray-500 mb-2'>
+              LATEST NEWS
+        </p>
+        <h2 className="text-3xl md:text-5xl font-semibold text-gray-800 mb-12 text-left">Explore Our Latest <br/>News & Tips</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {posts.map((post) => (
-            <div key={post.title} className="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <img src={post.img} alt={post.title} className="w-full h-48 object-cover" />
-              <div className="p-6">
-                <h3 className="font-semibold text-lg text-green-900">{post.title}</h3>
-                <p className="mt-2 text-gray-600 text-sm">A brief excerpt from the article goes here to give readers a preview...</p>
-                <a href="/" className="mt-4 inline-block text-green-700 font-semibold hover:text-green-900">
-                  Read More &rarr;
+            <div key={post.title} className="overflow-hidden">
+              <img src={post.img} alt={post.title} className="w-full rounded-lg h-44 object-cover" />
+              <div className="py-4 tetx-left">
+                <h3 className="font-medium text-xs text-gray-500">{post.date}</h3>
+                <h3 className="font-semibold mt-2 text-lg text-gray-800">{post.title}</h3>
+                <a href="/" className="mt-2 items-center flex text-green-700 font-semibold hover:text-green-900">
+                  Read More <CiCircleMore className='mt-1 ml-1' size={20} />
                 </a>
               </div>
             </div>
