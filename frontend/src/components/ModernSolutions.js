@@ -5,7 +5,8 @@ const ModernSolutions = () => {
     <div className="bg-white py-16 md:py-24 px-8">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-green-900">Modern Solutions for Traditional Challenges</h2>
+          <p className='text-xs font-normal text-gray-500 border border-gray-500 w-fit py-1 px-2 rounded-lg mb-2'>ABOUT PLATFORM</p>
+          <h2 className="text-3xl md:text-5xl font-bold text-green-900">Modern Solutions for Traditional Challenges</h2>
           <p className="mt-4 text-gray-600">
             We integrate cutting-edge technology to simplify complex agricultural challenges with time-tested
              agricultural practices to enhance 

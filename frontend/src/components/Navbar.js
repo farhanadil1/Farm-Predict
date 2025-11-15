@@ -29,7 +29,7 @@ const Navbar = () => {
           ${
             scrolled
               ? "backdrop-blur-xl bg-white/20 border-white/30 shadow-xl"
-              : "bg-white/60 border-gray-200 shadow-md"
+              : "bg-white/60 shadow-md"
           }
         `}
       >
