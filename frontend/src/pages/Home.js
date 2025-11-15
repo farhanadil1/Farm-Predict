@@ -8,6 +8,7 @@ import CTABanner from '../components/CTABanner'
 import SeedToHarvest from '../components/SeedToHarvest'
 import News from '../components/News'
 import Footer from '../components/Footer'
+import FAQ from '../components/faq/FAQ'
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <SeedToHarvest />
       <CTABanner />
       <News />
+      <FAQ />
       <Footer />
     </div>
   )
