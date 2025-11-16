@@ -45,7 +45,7 @@ const Hero = () => {
 
           {/* LEFT SIDE */}
           <div>
-            <p className="text-xs md:text-sm text-gray-200 leading-tight">
+            <p className="text-xs md:text-sm text-white md:text-gray-200 leading-tight">
               Our purpose extends beyond cultivation, we’re shaping <br className="hidden md:block" />
               a better tomorrow for people, communities, and the Earth.
             </p>
