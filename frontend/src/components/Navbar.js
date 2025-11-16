@@ -66,8 +66,8 @@ const Navbar = () => {
 
           {/* Contact Button */}
           <button className="hidden md:block px-5 py-2 rounded-3xl font-semibold
-            bg-green-500 text-white shadow-lg 
-            hover:bg-green-800 transition-all duration-300">
+            hover:bg-green-700 text-white shadow-lg 
+            bg-green-800 transition-all duration-300">
             Contact Us
           </button>
 

@@ -20,7 +20,7 @@ const Hero = () => {
 
           {/* LEFT */}
           <div className="text-left">
-            <p className="text-sm md:text-md font-medium text-gray-300">
+            <p className="text-sm md:text-md font-medium text-white md:text-gray-300">
               Sustainable solutions for modern
             </p>
             <p className="text-4xl md:text-7xl font-semibold text-orange-200 leading-tight">
@@ -33,7 +33,7 @@ const Hero = () => {
             <p className="text-4xl md:text-7xl font-semibold text-orange-200 leading-tight">
               2000
             </p>
-            <p className="text-sm md:text-md font-medium text-gray-300">
+            <p className="text-sm md:text-md font-medium text-white md:text-gray-300">
               Hectares under sustainable cultivation
             </p>
           </div>
