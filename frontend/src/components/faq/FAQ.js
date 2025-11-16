@@ -4,7 +4,7 @@ import Accordion from "./Accordion";
 export default function FAQ() {
   return (
     <div className="my-16 px-4 md:px-20">
-      <p className='text-xs mx-auto font-normal text-orange-300 border w-fit py-1 px-2 rounded-lg border-orange-300 mb-2'>
+      <p className='text-xs mx-auto font-medium text-orange-500 border w-fit py-1 px-2 rounded-lg border-orange-400 mb-2'>
               <span>FAQ</span>
       </p>
       <h2 className="font-head text-center font-semibold text-3xl md:text-5xl leading-snug md:leading-tight head-gradient mb-8">

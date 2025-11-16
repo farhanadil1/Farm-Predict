@@ -30,64 +30,64 @@ const WhatWeDo = () => {
   ];
 
   return (
-    <section className="py-20 px-10 bg-green-900 text-white">
+    <section className="py-16 sm:py-20 md:py-24 px-6 sm:px-10 bg-green-900 text-white">
       <div className="max-w-6xl mx-auto">
-        <div className='flex justify-between md:px-16 items-center'>
+
+        {/* SECTION HEADER */}
+        <div className="flex flex-col md:flex-row justify-between md:px-10 items-start md:items-center gap-6">
+
           <div>
-            {/* Heading */}
-            <p className='text-xs font-normal text-orange-300 border w-fit py-1 px-2 rounded-lg border-orange-300 mb-2'>
+            <p className="text-xs font-medium text-orange-300 border w-fit py-1 px-2 rounded-lg border-orange-300 mb-2">
               FARM SOLUTIONS
             </p>
-            <h2 className="text-3xl md:text-5xl font-semibold text-left">
-              What Our Agricultural<br/> Platform Offers
+
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold leading-snug">
+              What Our Agricultural<br className="hidden md:block" /> Platform Offers
             </h2>
-            <p className="text-left text-gray-200 max-w-2xl mb-12 mt-3">
+
+            <p className="text-gray-200 max-w-xl mt-3 text-sm sm:text-base">
               Smart, sustainable, and AI-driven agricultural solutions.
             </p>
-            </div>
-            <Link to={`/solutions`}>
-            <button className='bg-orange-200 px-6 py-3 rounded-lg text-black h-fit items-center
-            font-medium text-sm shadow-xl hover:scale-105 transition-all duration-300'>
+          </div>
+
+          <Link to={`/solutions`}>
+            <button className="bg-orange-200 px-5 sm:px-6 py-3 rounded-lg text-black font-medium text-sm shadow-xl hover:scale-105 transition-all duration-300">
               Learn More
             </button>
-            </Link>
+          </Link>
+
         </div>
-        {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 px-8">
+
+        {/* SERVICES GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 md:mt-14 px-2 sm:px-4">
           {services.map((service, index) => (
             <div
               key={index}
-              className="relative rounded-lg overflow-hidden shadow-lg 
-                         group cursor-pointer transition-all duration-500 
-                         hover:-translate-y-3 hover:shadow-2xl"
+              className="relative rounded-lg overflow-hidden shadow-lg group cursor-pointer 
+                         transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
             >
-              {/* Background Image */}
+              
+              {/* SERVICE IMAGE */}
               <img
                 src={`${service.img}?w=800&auto=format&fit=crop`}
                 alt={service.title}
-                className="w-full h-[340px] object-cover transition-transform duration-500 
-                           group-hover:scale-105"
+                className="w-full h-[260px] sm:h-[300px] md:h-[330px] object-cover 
+                           transition-transform duration-500 group-hover:scale-105"
               />
 
-              {/* Bottom Glass Fade */}
-              <div
-                className="
-                  absolute bottom-0 w-full
-                  bg-gradient-to-t 
-                  from-black/40 via-black/10 to-transparent
-                  backdrop-blur-[4px]
-                  px-4 py-2
-                "
-              >
-                <h3 className="text-white font-semibold text-left text-lg drop-shadow-xl">
-                  {service.id}
-                </h3>
-                <h3 className="text-white font-semibold text-left text-lg drop-shadow-xl">
-                  {service.title}
-                </h3>
-                <h3 className="text-gray-200 text-left text-xs drop-shadow-xl">
+              {/* GLASS FADE CONTENT */}
+              <div className="
+                absolute bottom-0 w-full
+                bg-gradient-to-t 
+                from-black/50 via-black/20 to-transparent
+                backdrop-blur-[3px]
+                px-4 py-3
+              ">
+                <h3 className="text-white font-semibold text-lg">{service.id}</h3>
+                <h3 className="text-white font-semibold text-lg">{service.title}</h3>
+                <p className="text-gray-300 text-xs mt-1 leading-relaxed">
                   {service.desc}
-                </h3>
+                </p>
               </div>
 
             </div>
