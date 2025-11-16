@@ -7,7 +7,7 @@ const Navbar = () => {
 
   const navs = [
     { name: "Home", link: "/" },
-    { name: "Solutions", link: "/solution" },
+    { name: "Solutions", link: "/solutions" },
     { name: "About", link: "/about" },
     { name: "Contact", link: "/contact" },
   ];
@@ -22,7 +22,6 @@ const Navbar = () => {
 
   return (
     <>
-      {/* NAVBAR */}
       <nav
         className={`fixed top-4 left-1/2 -translate-x-1/2 w-[90%] md:w-[75%] 
           rounded-3xl z-50 px-6 py-3 transition-all duration-300 border
@@ -35,7 +34,7 @@ const Navbar = () => {
       >
         <div className="flex justify-between items-center">
 
-          {/* Left Nav */}
+          {/* left nav */}
           <div className="hidden md:flex space-x-6 text-sm font-semibold">
             {navs.map((item, i) => (
               <NavLink
@@ -56,7 +55,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Center Logo */}
+          {/* center logo */}
           <div className="absolute left-1/2 -translate-x-1/2 flex items-center space-x-2">
             <img src="/logo.png" alt="VerdaAgro" className="h-8 w-8" />
             <h1 className="text-xl font-bold tracking-wide text-green-500">
@@ -64,14 +63,13 @@ const Navbar = () => {
             </h1>
           </div>
 
-          {/* Contact Button */}
           <button className="hidden md:block px-5 py-2 rounded-3xl font-semibold
             hover:bg-green-700 text-white shadow-lg 
             bg-green-800 transition-all duration-300">
             Contact Us
           </button>
 
-          {/* Mobile Menu Button */}
+          {/* mobile */}
           <button
             className="md:hidden text-gray-900"
             onClick={() => setOpen(true)}
@@ -85,7 +83,6 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Overlay */}
       {open && (
         <div
           className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 md:hidden"
@@ -93,7 +90,7 @@ const Navbar = () => {
         ></div>
       )}
 
-      {/* Mobile Sidebar */}
+      {/*  mob sidebar */}
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-white/90 backdrop-blur-xl 
           shadow-2xl z-50 transform transition-transform duration-300 md:hidden

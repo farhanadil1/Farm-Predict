@@ -25,12 +25,10 @@ const News = () => {
     <div className="bg-white py-14 sm:py-16 px-4 sm:px-8">
       <div className="max-w-6xl mx-auto">
 
-        {/* SECTION TAG */}
         <p className="text-xs font-medium text-orange-500 border border-orange-400 w-fit py-1 px-2 rounded-lg mb-3">
           LATEST NEWS
         </p>
 
-        {/* HEADER ROW */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0 mb-10">
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-gray-800 leading-tight">
             Explore Our Latest <br className="hidden md:block" />
@@ -44,19 +42,16 @@ const News = () => {
           </Link>
         </div>
 
-        {/* POSTS GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {posts.map((post) => (
             <div key={post.title} className="overflow-hidden">
               
-              {/* IMAGE */}
               <img 
                 src={post.img} 
                 alt={post.title} 
                 className="w-full h-48 sm:h-52 md:h-56 rounded-lg object-cover shadow-md"
               />
 
-              {/* CONTENT */}
               <div className="py-4 text-left">
                 <h3 className="text-xs sm:text-sm font-medium text-gray-500">{post.date}</h3>
 

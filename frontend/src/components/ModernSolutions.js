@@ -4,10 +4,8 @@ import { Link } from 'react-router-dom';
 const ModernSolutions = () => {
   return (
     <div className="bg-white py-12 sm:py-16 md:py-24 px-6 sm:px-8">
-      {/* MAIN GRID */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-        {/* LEFT TEXT SECTION */}
         <div>
           <p className="text-xs font-medium text-orange-500 border border-orange-400 w-fit py-1 px-2 rounded-lg mb-3">
             ABOUT PLATFORM
@@ -33,7 +31,6 @@ const ModernSolutions = () => {
           </Link>
         </div>
 
-        {/* RIGHT IMAGE SECTION */}
         <div className="w-full flex justify-center md:justify-end">
           <img
             src="./tractor.jpg"

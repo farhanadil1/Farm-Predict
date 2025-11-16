@@ -27,7 +27,6 @@ const SeedToHarvest = () => {
     <div className="bg-gray-50 py-16 px-6 sm:px-8 md:py-20">
       <div className="max-w-6xl mx-auto text-center">
 
-        {/* HEADINGS – keep old layout on desktop */}
         <h2 className="
           text-3xl sm:text-4xl md:text-6xl lg:text-7xl 
           font-bold text-green-900
@@ -45,21 +44,18 @@ const SeedToHarvest = () => {
           to Harvest
         </h2>
 
-        {/* GRID */}
         <div className="grid grid-cols-1 md:z-10 md:-mt-2.5 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mt-10 px-4 sm:px-10 md:px-20">
           {steps.map((step) => (
             <div
               key={step.title}
               className="overflow-hidden cursor-pointer"
             >
-              {/* Image */}
               <img
                 src={step.img}
                 alt={step.title}
                 className="w-full h-72 sm:h-80 md:h-96 rounded-lg object-cover shadow-md transition-all duration-300 hover:scale-[1.02]"
               />
 
-              {/* Tags */}
               <div className="flex mt-3">
                 <p className="px-2 py-1 text-[10px] sm:text-xs text-gray-600 border border-gray-500 rounded-lg">
                   {step.tag1}
@@ -69,7 +65,6 @@ const SeedToHarvest = () => {
                 </p>
               </div>
 
-              {/* Title */}
               <h3 className="font-semibold text-left text-gray-900 text-xl sm:text-2xl mt-2 hover:underline transition-all duration-200">
                 {step.title}
               </h3>
@@ -77,7 +72,6 @@ const SeedToHarvest = () => {
           ))}
         </div>
 
-        {/* Button */}
         <Link to={"/solutions"}>
           <button className="bg-orange-200 mt-12 px-6 py-3 rounded-lg text-black font-medium text-sm shadow-xl hover:scale-105 transition-all duration-300">
             View More

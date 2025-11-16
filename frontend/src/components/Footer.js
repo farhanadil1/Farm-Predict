@@ -16,10 +16,8 @@ const Footer = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto">
 
-        {/* Top Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 sm:gap-14">
 
-          {/* Logo + Description */}
           <div>
             <div className="flex items-center mb-4">
               <img src="/logo.png" alt="FarmPredict" className="h-10 w-10 sm:h-12 sm:w-12" />
@@ -34,7 +32,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Company Links */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-3 sm:mb-4">Company</h3>
             <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
@@ -44,7 +41,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Solutions */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-3 sm:mb-4">Solutions</h3>
             <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
@@ -55,7 +51,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Legal */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-3 sm:mb-4">Legal</h3>
             <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
@@ -66,18 +61,14 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Divider */}
         <div className="mt-14 border-t border-green-800"></div>
 
-        {/* Bottom Section */}
         <div className="mt-8 flex flex-col md:flex-row justify-between items-center text-sm">
 
-          {/* Copyright */}
           <p className="text-gray-400 text-center md:text-left">
             © 2025 FarmPredict. All rights reserved.
           </p>
 
-          {/* Social Icons */}
           <div className="flex space-x-6 mt-5 md:mt-0">
             {[FaFacebookF, FaTwitter, FaLinkedinIn].map((Icon, i) => (
               <a

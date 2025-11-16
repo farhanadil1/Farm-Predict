@@ -56,7 +56,6 @@ const PerformanceDashboard = () => {
   return (
     <div className="bg-gray-50 min-h-screen py-14 px-4 sm:px-6 md:px-12 lg:px-20">
       
-      {/* HEADER */}
       <div className="max-w-7xl mx-auto text-center mb-12">
         <p className="text-xs font-medium text-orange-500 border border-orange-400 px-2 py-1 rounded-lg w-fit mx-auto">
           PERFORMANCE DASHBOARD
@@ -91,7 +90,7 @@ const PerformanceDashboard = () => {
 
       <div className="grid md:grid-cols-2 gap-10 max-w-7xl mx-auto mb-10">
         
-        {/* Accuracy Trend */}
+        {/* accuracy */}
         <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
           <h2 className="font-semibold text-gray-700 mb-4 text-lg">Accuracy Trend</h2>
           <div className="h-64">
@@ -109,7 +108,7 @@ const PerformanceDashboard = () => {
           </div>
         </div>
 
-        {/* Model Comparison */}
+        {/* comparison */}
         <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
           <h2 className="font-semibold text-gray-700 mb-4 text-lg">Model Comparison</h2>
           <div className="h-64">
@@ -131,7 +130,7 @@ const PerformanceDashboard = () => {
 
       <div className="grid md:grid-cols-2 gap-10 max-w-7xl mx-auto">
         
-        {/* MAE Trend */}
+        {/* MAE */}
         <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
           <h2 className="font-semibold text-gray-700 mb-4 text-lg">MAE Over Time</h2>
           <div className="h-52">
@@ -159,7 +158,7 @@ const PerformanceDashboard = () => {
           </div>
         </div>
 
-        {/* Model Distribution */}
+        {/* distribution */}
         <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
           <h2 className="font-semibold text-gray-700 mb-4 text-lg">Model Distribution</h2>
           <div className="h-52 flex items-center justify-center">

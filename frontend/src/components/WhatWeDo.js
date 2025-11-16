@@ -33,7 +33,7 @@ const WhatWeDo = () => {
     <section className="py-16 sm:py-20 md:py-24 px-6 sm:px-10 bg-green-900 text-white">
       <div className="max-w-6xl mx-auto">
 
-        {/* SECTION HEADER */}
+        {/* header */}
         <div className="flex flex-col md:flex-row justify-between md:px-10 items-start md:items-center gap-6">
 
           <div>
@@ -58,16 +58,15 @@ const WhatWeDo = () => {
 
         </div>
 
-        {/* SERVICES GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 md:mt-14 px-2 sm:px-4">
           {services.map((service, index) => (
+            <Link to={`/solutions`}>
             <div
               key={index}
               className="relative rounded-lg overflow-hidden shadow-lg group cursor-pointer 
                          transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
             >
               
-              {/* SERVICE IMAGE */}
               <img
                 src={`${service.img}?w=800&auto=format&fit=crop`}
                 alt={service.title}
@@ -75,7 +74,7 @@ const WhatWeDo = () => {
                            transition-transform duration-500 group-hover:scale-105"
               />
 
-              {/* GLASS FADE CONTENT */}
+              {/* glass fade */}
               <div className="
                 absolute bottom-0 w-full
                 bg-gradient-to-t 
@@ -91,6 +90,7 @@ const WhatWeDo = () => {
               </div>
 
             </div>
+            </Link>
           ))}
         </div>
 

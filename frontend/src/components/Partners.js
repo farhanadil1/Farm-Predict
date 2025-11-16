@@ -35,7 +35,6 @@ const steps = [
     <section className="bg-white pb-20 pt-12 px-4 sm:px-8">
       <div className="max-w-6xl mx-auto text-center">
 
-        {/* Header */}
         <p className="text-xs font-medium mx-auto text-orange-500 border border-orange-400 w-fit py-1 px-2 rounded-lg mb-3">
           WORKING PROCESS
         </p>
@@ -44,19 +43,17 @@ const steps = [
           How Does Our Process Work?
         </h2>
 
-        {/* Steps Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
 
           {steps.map((item, index) => (
             <div
               key={index}
               className="
-                rounded-2xl p-6 shadow-md border border-gray-200 bg-white 
+                rounded-lg p-6 shadow-md border border-gray-200 bg-white 
                 transition-all duration-300 cursor-pointer group
                 hover:bg-green-50 hover:border-green-600 hover:shadow-xl
               "
             >
-              {/* Step Label */}
               <div className="-mt-2 mb-4">
                 <span className="
                   text-xs font-semibold px-3 py-1 rounded-md bg-yellow-200 text-gray-700
@@ -67,18 +64,15 @@ const steps = [
                 </span>
               </div>
 
-              {/* Icon */}
               <div className="flex justify-center">
               <img 
               src={item.icon} alt={item.title}
               className="mb-4 md:h-32 h-28 items-center"></img>
               </div>
-              {/* Title */}
               <h3 className="md:text-lg text-sm font-semibold text-gray-800 mt-2">
                 {item.title}
               </h3>
 
-              {/* Description */}
               <p className="text-gray-500 text-xs md:text-sm mt-2">{item.desc}</p>
 
             </div>

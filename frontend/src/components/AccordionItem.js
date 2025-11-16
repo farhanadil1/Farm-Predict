@@ -5,7 +5,6 @@ const AccordionItem = ({ title, desc }) => {
 
   return (
     <div className="border-b border-white/20 py-3">
-      {/* Title Row */}
       <button
         onClick={() => setOpen(!open)}
         className="flex justify-between items-center w-full text-left text-white font-medium text-lg"
@@ -16,7 +15,6 @@ const AccordionItem = ({ title, desc }) => {
         </span>
       </button>
 
-      {/* Smooth Content Wrapper */}
       <div
         className={`overflow-hidden transition-all duration-300 ease-in-out ${
           open ? "max-h-40 opacity-100 mt-2" : "max-h-0 opacity-0 mt-0"
