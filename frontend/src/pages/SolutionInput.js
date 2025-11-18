@@ -4,12 +4,18 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { IoMdArrowRoundBack } from "react-icons/io";
 
-
 const inputFields = {
   0: ["Soil Type", "Rainfall (mm)", "Temperature (°C)"],
   1: ["Nitrogen (N)", "Phosphorus (P)", "Potassium (K)", "Soil pH"],
   2: ["Soil Moisture (%)", "Temperature (°C)", "Crop Type"],
   3: ["Crop Type", "Region", "Season"],
+};
+
+const dropdownOptions = {
+  "Soil Type": ["Sandy", "Clay", "Silty", "Loamy", "Peaty", "Chalky"],
+  "Crop Type": ["Wheat", "Rice", "Maize", "Sugarcane", "Cotton", "Pulses"],
+  Season: ["Kharif", "Rabi", "Zaid"],
+  Region: ["North India", "South India", "East India", "West India", "Central India"],
 };
 
 const solutionNames = [
@@ -25,12 +31,30 @@ const SolutionInput = () => {
 
   const [form, setForm] = useState({});
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({}); 
 
   const handleChange = (field, value) => {
     setForm({ ...form, [field]: value });
+    setErrors({ ...errors, [field]: "" });
+  };
+
+  const validateInputs = () => {
+    let newErrors = {};
+    let fields = inputFields[id];
+
+    fields.forEach((field) => {
+      if (!form[field] || form[field].trim() === "") {
+        newErrors[field] = `${field} is required`;
+      }
+    });
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handlePredict = () => {
+    if (!validateInputs()) return;
+
     setLoading(true);
     setTimeout(() => {
       navigate(`/prediction/${id}`, {
@@ -43,7 +67,7 @@ const SolutionInput = () => {
     <section className="bg-white min-h-screen">
       <Navbar />
 
-      <div className="max-w-3xl mx-auto px-6 mt-28 mb-20">   
+      <div className="max-w-3xl mx-auto px-6 mt-28 mb-20">
 
         <div className="mb-12">
           <p className="text-xs uppercase tracking-wide text-green-700 font-medium mb-2">
@@ -62,41 +86,58 @@ const SolutionInput = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8">
           {inputFields[id].map((field, idx) => (
             <div key={idx} className="space-y-2">
-              <label className="text-sm text-gray-700 font-medium">
-                {field}
-              </label>
+              <label className="text-sm text-gray-700 font-medium">{field}</label>
 
-              <input
-                type="text"
-                placeholder={field}
-                onChange={(e) => handleChange(field, e.target.value)}
-                className="
-                  w-full px-3 py-2 bg-gray-100/60 rounded-lg 
-                  text-gray-800 text-sm focus:outline-none
-                  focus:ring-[0.5px] focus:ring-green-500 transition
-                "
-              />
+              {dropdownOptions[field] ? (
+                <select
+                  onChange={(e) => handleChange(field, e.target.value)}
+                  className={`
+                    w-full px-3 py-2 bg-gray-100/60 rounded-lg text-gray-800 text-sm
+                    focus:outline-none focus:ring-[0.5px] focus:ring-green-500 transition
+                    ${errors[field] ? "ring-1 ring-red-500" : ""}
+                  `}
+                >
+                  <option value="">Select {field}</option>
+                  {dropdownOptions[field].map((option, i) => (
+                    <option key={i} value={option}>{option}</option>
+                  ))}
+                </select>
+              ) : (
+                <input
+                  type="text"
+                  placeholder={field}
+                  onChange={(e) => handleChange(field, e.target.value)}
+                  className={`
+                    w-full px-3 py-2 bg-gray-100/60 rounded-lg text-gray-800 text-sm
+                    focus:outline-none focus:ring-[0.5px] focus:ring-green-500 transition
+                    ${errors[field] ? "ring-1 ring-red-500" : ""}
+                  `}
+                />
+              )}
+
+              {errors[field] && (
+                <p className="text-xs text-red-500">{errors[field]}</p>
+              )}
             </div>
           ))}
         </div>
 
         <div className="flex justify-center mt-12 items-center">
-        <Link
-          to="/solutions"
-          className="text-green-700 mr-10 text-sm font-medium hover:underline inline-flex items-center gap-1 mb-8"
-        >
-          <span className="items-center flex pt-7"><IoMdArrowRoundBack className="mr-1"/> Back to Solutions</span>
-        </Link>
+          <Link
+            to="/solutions"
+            className="text-green-700 mr-10 text-sm font-medium hover:underline inline-flex items-center gap-1 mb-8"
+          >
+            <span className="items-center flex pt-7">
+              <IoMdArrowRoundBack className="mr-1" /> Back to Solutions
+            </span>
+          </Link>
+
           <button
             onClick={handlePredict}
             disabled={loading}
             className={`
-              px-10 py-3 rounded-lg font-medium text-white text-sm tracking-wide
-              transition-all 
-              ${loading 
-                ? "bg-green-300 cursor-not-allowed" 
-                : "bg-green-600 hover:bg-green-700 shadow-sm"
-              }
+              px-10 py-3 rounded-lg font-medium text-white text-sm tracking-wide transition-all
+              ${loading ? "bg-green-300 cursor-not-allowed" : "bg-green-600 hover:bg-green-700 shadow-sm"}
             `}
           >
             {loading ? "Processing..." : "Run Prediction"}
@@ -108,7 +149,6 @@ const SolutionInput = () => {
             <div className="w-6 h-6 border-4 border-gray-200 border-t-green-600 rounded-full animate-spin"></div>
           </div>
         )}
-
       </div>
 
       <Footer />
