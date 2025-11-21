@@ -48,7 +48,7 @@ const SeedToHarvest = () => {
           {steps.map((step) => (
             <div
               key={step.title}
-              className="overflow-hidden cursor-pointer"
+              className="overflow-hidden cursor-pointer rounded-lg"
             >
               <img
                 src={step.img}
@@ -56,7 +56,7 @@ const SeedToHarvest = () => {
                 className="w-full h-72 sm:h-80 md:h-96 rounded-lg object-cover shadow-md transition-all duration-300 hover:scale-[1.02]"
               />
 
-              <div className="flex mt-3">
+              <div className="flex mt-5">
                 <p className="px-2 py-1 text-[10px] sm:text-xs text-gray-600 border border-gray-500 rounded-lg">
                   {step.tag1}
                 </p>

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import { CiCircleMore } from "react-icons/ci";
 
 const News = () => {
@@ -35,16 +34,16 @@ const News = () => {
             News & Tips
           </h2>
 
-          <Link to="/solutions">
+          <a href='https://krishijagran.com/' target='blank'>
             <button className="bg-orange-200 px-5 sm:px-6 py-3 rounded-lg text-black font-medium text-sm shadow-xl hover:scale-105 transition-all duration-300">
               Read More
             </button>
-          </Link>
+          </a>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {posts.map((post) => (
-            <div key={post.title} className="overflow-hidden">
+            <div key={post.title} className="overflow-hidden cursor-pointer">
               
               <img 
                 src={post.img} 
@@ -60,7 +59,7 @@ const News = () => {
                 </h3>
 
                 <a 
-                  href="/" 
+                  href="https://krishijagran.com/" target='blank' 
                   className="mt-2 flex items-center text-green-700 font-semibold hover:text-green-900 transition-colors"
                 >
                   Read More 

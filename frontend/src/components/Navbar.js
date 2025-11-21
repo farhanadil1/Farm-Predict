@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
@@ -56,18 +56,22 @@ const Navbar = () => {
           </div>
 
           {/* center logo */}
-          <div className="absolute left-1/2 -translate-x-1/2 flex items-center space-x-2">
+         <a href="/">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center space-x-2">
             <img src="/logo.png" alt="VerdaAgro" className="h-8 w-8" />
-            <h1 className="text-xl font-bold tracking-wide text-green-500">
+            <h1 className="text-xl font-bold tracking-wide text-green-800">
               FarmPredict
             </h1>
           </div>
+        </a>
 
+            <Link to={`/contact`}>
           <button className="hidden md:block px-5 py-2 rounded-3xl font-semibold
             hover:bg-green-700 text-white shadow-lg 
             bg-green-800 transition-all duration-300">
             Contact Us
           </button>
+          </Link>
 
           {/* mobile */}
           <button
@@ -122,11 +126,12 @@ const Navbar = () => {
               </NavLink>
             ))}
           </nav>
-
+            <Link to={`/contact`}>
           <button className="w-full px-5 py-3 rounded-2xl mt-8 font-semibold
             bg-green-500 text-white shadow-lg hover:bg-green-800 transition-all duration-300">
             Contact Us
           </button>
+          </Link>
         </div>
       </div>
     </>

@@ -13,7 +13,7 @@ export default function FAQ() {
       <Accordion />
       <p className="font-para text-paragraph text-center text-xs font-semibold mt-4">
         More questions? visit our
-        <span className="text-orange-300 cursor-pointer ml-1">FAQ library</span>
+        <span className="text-orange-500 cursor-pointer ml-1">FAQ library</span>
       </p>
     </div>
   );
